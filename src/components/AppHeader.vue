@@ -46,11 +46,13 @@ export default {
 </script>
 
 <template>
-    <div class="container row">
-        <HeaderLogo />
+    <header>
+        <div class="container row">
+            <HeaderLogo />
 
-        <HeaderNav :navItems="navMenu" />
-    </div>
+            <HeaderNav :navItems="navMenu" />
+        </div>
+    </header>
 </template>
 
 <style lang="scss" scoped>
