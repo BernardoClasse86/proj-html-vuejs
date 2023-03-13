@@ -59,7 +59,7 @@ export default {
 @use '../style/partials/reset' as *;
 
 .container.row {
-    padding: 2rem 0;
+    // padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
 }

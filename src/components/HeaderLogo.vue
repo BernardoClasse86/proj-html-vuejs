@@ -1,5 +1,7 @@
 <script>
+export default {
 
+}
 </script>
 
 <template>
@@ -17,5 +19,6 @@
 
 .logo-thumb {
     width: 190px;
+    cursor: pointer;
 }
 </style>
