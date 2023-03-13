@@ -1,12 +1,14 @@
 <script>
 import MainHero from './MainHero.vue'
 import MainPreIntro from './MainPreIntro.vue';
+import MainIntro from './MainIntro.vue';
 
 export default {
     components: {
         MainHero,
         MainPreIntro,
-    }
+        MainIntro,
+    },
 }
 
 </script>
@@ -18,6 +20,10 @@ export default {
 
     <section class="preintro-section">
         <MainPreIntro />
+    </section>
+
+    <section class="intro-section">
+        <MainIntro />
     </section>
 </template>
 
