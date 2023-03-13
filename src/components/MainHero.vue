@@ -12,7 +12,7 @@ export default {
             <h1 class="hero-subtitle">& after-school care</h1>
         </div>
 
-        <a class="button opening" href="">buy this theme now</a>
+        <a class="btn btn-orange" href="">buy this theme now</a>
 
         <img class="slide-img-1" src="/images/hero/slider_slide3_img1.png" alt="">
         <img class="slide-img-2" src="/images/hero/slider_slide3_img2.png" alt="">
@@ -57,7 +57,7 @@ export default {
     margin-bottom: 2rem;
 }
 
-.button.opening {
+.btn.btn-orange {
     background-color: $orange-color;
 }
 

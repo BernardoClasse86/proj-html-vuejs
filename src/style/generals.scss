@@ -1,3 +1,5 @@
+@use './partials/variables' as *;
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -12,10 +14,20 @@
     flex-direction: column;
 }
 
-.button {
+.btn {
     color: white;
     text-align: center;
     line-height: 2rem;
     text-transform: uppercase;
+}
+
+.btn-orange {
+    background-color: $orange-color;
     padding: 1rem;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.5rem 1.5rem;
 }
