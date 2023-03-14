@@ -94,6 +94,7 @@ export default {
         .solid-select {
             border: 2px solid white;
             padding: 0.40rem 1.25rem;
+            cursor: pointer;
         }
     }
 }

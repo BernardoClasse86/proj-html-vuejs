@@ -9,6 +9,8 @@ import MainWorks from './AppMainComponents/MainWorks.vue';
 import MainGallery from './AppMainComponents/MainGallery.vue';
 import MainPreOutro from './AppMainComponents/MainPreOutro.vue';
 import MainStaff from './AppMainComponents/MainStaff.vue';
+import MainReview from './AppMainComponents/MainReview.vue';
+import MainNews from './AppMainComponents/MainNews.vue';
 
 export default {
     components: {
@@ -22,6 +24,8 @@ export default {
         MainGallery,
         MainPreOutro,
         MainStaff,
+        MainReview,
+        MainNews,
     },
 }
 
@@ -68,6 +72,14 @@ export default {
         <section class="staff-section">
             <MainStaff />
         </section>
+
+        <section class="reveiw-section">
+            <MainReview />
+        </section>
+
+        <section>
+            <MainNews />
+        </section>
     </main>
 </template>
 
@@ -100,5 +112,11 @@ export default {
 
 .work-section {
     background-color: $grey-bg;
+}
+
+.reveiw-section {
+    background-position: center;
+    background-size: cover;
+    background-image: url(/images/main-reviews_images/parallax_02.jpg);
 }
 </style>
