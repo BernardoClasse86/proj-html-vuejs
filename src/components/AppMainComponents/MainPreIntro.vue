@@ -8,14 +8,17 @@ export default {
 <template>
     <div class="container row preintro">
         <p class="preintro-title">how to enroll your child to a class?</p>
-        <div class="btn btn-transparent" href="">learn more <font-awesome-icon icon="fa-solid fa-chevron-right" /></div>
+        <div class="btn btn-transparent" href="">
+            <p>learn more</p>
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-@use '../style/generals.scss' as *;
-@use '../style/partials/variables' as *;
-@use '../style/partials/reset' as *;
+@use '../../style/generals.scss' as *;
+@use '../../style/partials/variables' as *;
+@use '../../style/partials/reset' as *;
 
 .row.preintro {
     padding: 3rem 0;
@@ -27,6 +30,12 @@ export default {
         font-weight: 300;
         color: white;
         text-transform: capitalize;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
     .btn:hover {

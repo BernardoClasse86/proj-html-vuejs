@@ -19,9 +19,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style/generals.scss' as *;
-@use '../style/partials/variables' as *;
-@use '../style/partials/reset' as *;
+@use '../../style/generals.scss' as *;
+@use '../../style/partials/variables' as *;
+@use '../../style/partials/reset' as *;
 
 .list-item {
     gap: 1rem;

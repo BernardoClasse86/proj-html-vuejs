@@ -1,6 +1,6 @@
 <script>
-import HeaderNav from './HeaderNav.vue'
-import HeaderLogo from './HeaderLogo.vue'
+import HeaderNav from './AppHeaderComponents/HeaderNav.vue'
+import HeaderLogo from './AppHeaderComponents/HeaderLogo.vue'
 
 export default {
     components: {

@@ -1,8 +1,10 @@
 <script>
-import MainHero from './MainHero.vue'
-import MainPreIntro from './MainPreIntro.vue';
-import MainIntro from './MainIntro.vue';
-import MainDescription from './MainDescription.vue';
+import MainHero from './AppMainComponents/MainHero.vue'
+import MainPreIntro from './AppMainComponents/MainPreIntro.vue';
+import MainIntro from './AppMainComponents/MainIntro.vue';
+import MainDescription from './AppMainComponents/MainDescription.vue';
+import MainNumbers from './AppMainComponents/MainNumbers.vue';
+import MainOurClasses from './AppMainComponents/MainOurClasses.vue';
 
 export default {
     components: {
@@ -10,6 +12,8 @@ export default {
         MainPreIntro,
         MainIntro,
         MainDescription,
+        MainNumbers,
+        MainOurClasses
     },
 }
 
@@ -31,6 +35,14 @@ export default {
 
         <section class="desc-section">
             <MainDescription />
+        </section>
+
+        <section class="numbers-section">
+            <MainNumbers />
+        </section>
+
+        <section class="ourclass-section">
+            <MainOurClasses />
         </section>
     </main>
 </template>
@@ -54,5 +66,11 @@ export default {
 
 .desc-section {
     background-color: $grey-bg;
+}
+
+.numbers-section {
+    background-position: center;
+    background-size: cover;
+    background-image: url(/images/main-numb_images/parallax_01.jpg);
 }
 </style>
