@@ -5,6 +5,7 @@ import MainIntro from './AppMainComponents/MainIntro.vue';
 import MainDescription from './AppMainComponents/MainDescription.vue';
 import MainNumbers from './AppMainComponents/MainNumbers.vue';
 import MainOurClasses from './AppMainComponents/MainOurClasses.vue';
+import MainWorks from './AppMainComponents/MainWorks.vue';
 
 export default {
     components: {
@@ -13,7 +14,8 @@ export default {
         MainIntro,
         MainDescription,
         MainNumbers,
-        MainOurClasses
+        MainOurClasses,
+        MainWorks,
     },
 }
 
@@ -44,6 +46,10 @@ export default {
         <section class="ourclass-section">
             <MainOurClasses />
         </section>
+
+        <section class="work-section">
+            <MainWorks />
+        </section>
     </main>
 </template>
 
@@ -72,5 +78,9 @@ export default {
     background-position: center;
     background-size: cover;
     background-image: url(/images/main-numb_images/parallax_01.jpg);
+}
+
+.work-section {
+    background-color: $grey-bg;
 }
 </style>
