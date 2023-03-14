@@ -6,6 +6,7 @@ import MainDescription from './AppMainComponents/MainDescription.vue';
 import MainNumbers from './AppMainComponents/MainNumbers.vue';
 import MainOurClasses from './AppMainComponents/MainOurClasses.vue';
 import MainWorks from './AppMainComponents/MainWorks.vue';
+import MainGallery from './AppMainComponents/MainGallery.vue';
 
 export default {
     components: {
@@ -16,6 +17,7 @@ export default {
         MainNumbers,
         MainOurClasses,
         MainWorks,
+        MainGallery,
     },
 }
 
@@ -49,6 +51,10 @@ export default {
 
         <section class="work-section">
             <MainWorks />
+        </section>
+
+        <section class="gallery-container">
+            <MainGallery />
         </section>
     </main>
 </template>
