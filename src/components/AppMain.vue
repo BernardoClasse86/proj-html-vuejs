@@ -7,6 +7,8 @@ import MainNumbers from './AppMainComponents/MainNumbers.vue';
 import MainOurClasses from './AppMainComponents/MainOurClasses.vue';
 import MainWorks from './AppMainComponents/MainWorks.vue';
 import MainGallery from './AppMainComponents/MainGallery.vue';
+import MainPreOutro from './AppMainComponents/MainPreOutro.vue';
+import MainStaff from './AppMainComponents/MainStaff.vue';
 
 export default {
     components: {
@@ -18,6 +20,8 @@ export default {
         MainOurClasses,
         MainWorks,
         MainGallery,
+        MainPreOutro,
+        MainStaff,
     },
 }
 
@@ -55,6 +59,14 @@ export default {
 
         <section class="gallery-container">
             <MainGallery />
+        </section>
+
+        <section class="preintro-section">
+            <MainPreOutro />
+        </section>
+
+        <section class="staff-section">
+            <MainStaff />
         </section>
     </main>
 </template>
