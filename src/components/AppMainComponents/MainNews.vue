@@ -118,6 +118,5 @@ export default {
         margin: 0 auto;
         width: 100px;
     }
-
 }
 </style>

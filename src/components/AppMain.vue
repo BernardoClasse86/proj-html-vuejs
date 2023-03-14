@@ -11,6 +11,7 @@ import MainPreOutro from './AppMainComponents/MainPreOutro.vue';
 import MainStaff from './AppMainComponents/MainStaff.vue';
 import MainReview from './AppMainComponents/MainReview.vue';
 import MainNews from './AppMainComponents/MainNews.vue';
+import MainContact from './AppMainComponents/MainContact.vue';
 
 export default {
     components: {
@@ -26,6 +27,7 @@ export default {
         MainStaff,
         MainReview,
         MainNews,
+        MainContact,
     },
 }
 
@@ -41,7 +43,7 @@ export default {
             <MainPreIntro />
         </section>
 
-        <section class="intro-section">
+        <section>
             <MainIntro />
         </section>
 
@@ -53,7 +55,7 @@ export default {
             <MainNumbers />
         </section>
 
-        <section class="ourclass-section">
+        <section>
             <MainOurClasses />
         </section>
 
@@ -61,7 +63,7 @@ export default {
             <MainWorks />
         </section>
 
-        <section class="gallery-container">
+        <section>
             <MainGallery />
         </section>
 
@@ -69,7 +71,7 @@ export default {
             <MainPreOutro />
         </section>
 
-        <section class="staff-section">
+        <section>
             <MainStaff />
         </section>
 
@@ -79,6 +81,18 @@ export default {
 
         <section>
             <MainNews />
+        </section>
+
+        <section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1400.8393078831377!2d-75.67537263292701!3d45.395653500309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05eea825aaab%3A0x5d1d325426cfc369!2sFable%20Care%20Center!5e0!3m2!1sen!2sit!4v1678815142984!5m2!1sen!2sit"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <section>
+            <MainContact />
         </section>
     </main>
 </template>
