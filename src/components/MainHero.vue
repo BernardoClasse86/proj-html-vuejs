@@ -12,7 +12,7 @@ export default {
             <h1 class="hero-subtitle">& after-school care</h1>
         </div>
 
-        <a class="btn btn-orange" href="">buy this theme now</a>
+        <div class="btn btn-orange" href="">buy this theme now</div>
 
         <img class="slide-img-1" src="/images/hero/slider_slide3_img1.png" alt="">
         <img class="slide-img-2" src="/images/hero/slider_slide3_img2.png" alt="">
@@ -59,6 +59,11 @@ export default {
 
 .btn.btn-orange {
     background-color: $orange-color;
+    display: inline;
+}
+
+.btn:hover {
+    background-color: $purple-color;
 }
 
 .slide-img-1 {

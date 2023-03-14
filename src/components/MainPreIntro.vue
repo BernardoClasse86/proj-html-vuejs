@@ -8,7 +8,7 @@ export default {
 <template>
     <div class="container row preintro">
         <p class="preintro-title">how to enroll your child to a class?</p>
-        <a class="btn btn-transparent" href="">learn more <font-awesome-icon icon="fa-solid fa-chevron-right" /></a>
+        <div class="btn btn-transparent" href="">learn more <font-awesome-icon icon="fa-solid fa-chevron-right" /></div>
     </div>
 </template>
 
@@ -27,6 +27,11 @@ export default {
         font-weight: 300;
         color: white;
         text-transform: capitalize;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: $purple-color;
     }
 }
 </style>

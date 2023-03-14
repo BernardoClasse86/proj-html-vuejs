@@ -1,6 +1,45 @@
 <script>
 export default {
+    data() {
+        return {
+            descSlides: [
+                {
+                    image: '/images/main-desc_images/gallery_01-690x506.jpg'
+                },
+                {
+                    image: '/images/main-desc_images/gallery_07-690x506.jpg'
+                },
+                {
+                    image: '/images/main-desc_images/gallery_08-690x506.jpg'
+                },
+            ],
 
+            slideCounter: 0
+        }
+    },
+    methods: {
+        nextSlide() {
+
+            this.slideCounter++
+
+            if (this.slideCounter === this.descSlides.length) {
+
+                this.slideCounter = 0
+            }
+
+        },
+
+        prevSlide() {
+
+            this.slideCounter--
+
+            if (this.slideCounter < 0) {
+
+                this.slideCounter = this.descSlides.length - 1
+            }
+
+        },
+    },
 }
 
 </script>
@@ -10,10 +49,13 @@ export default {
         <div class="column">
             <div class="desc-row">
                 <div class="btn btn-orange">
-                    overview
-                    <!-- <font-awesome-icon icon="fa-solid fa-caret-down" /> -->
+                    <p>overview</p>
+                    <font-awesome-icon icon="fa-solid fa-caret-down" class="triangle icon" />
                 </div>
-                <div class="btn">our mission</div>
+                <div class="btn">
+                    <p>our mission</p>
+                    <font-awesome-icon icon="fa-solid fa-caret-down" class="triangle icon-2" />
+                </div>
             </div>
 
             <div class="description-item">
@@ -21,22 +63,17 @@ export default {
                     for children.</h2>
 
                 <div class="desc-item-row">
-
                     <figure class="desc-thumb-style">
                         <img class="desc-thumb" src="/images/main-desc_images/clock_alt.png" alt="">
                     </figure>
 
                     <div class="desc-item-style">
                         <h5 class="desc-item-title">full day session</h5>
-                        <p class="desc-item-text">Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
-                            Maecenas
-                            node
-                            estibulum.</p>
+                        <p class="desc-item-text">Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.</p>
                     </div>
                 </div>
 
                 <div class="desc-item-row">
-
                     <figure class="desc-thumb-style">
                         <img class="desc-thumb" src="/images/main-desc_images/diagram_alt.png" alt="">
                     </figure>
@@ -46,7 +83,6 @@ export default {
                         <p class="desc-item-text">Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas
                             node estibulum.</p>
                     </div>
-
                 </div>
 
             </div>
@@ -54,10 +90,11 @@ export default {
         </div>
 
         <div class="column">
-            <div class="slider">
-                <font-awesome-icon icon="fa-solid fa-chevron-left" class="arrow left" />
-                <img class="desc-main-slide" src="/images/main-desc_images/gallery_01-690x506.jpg" alt="">
-                <font-awesome-icon icon="fa-solid fa-chevron-right" class="arrow right" />
+            <div v-for="(descSlide, i) in descSlides" class="slider off-slide"
+                :class="i === slideCounter ? 'on-slide' : ''">
+                <img class="desc-main-slide" :src="descSlide.image" alt="">
+                <font-awesome-icon icon="fa-solid fa-chevron-right" class="arrow right" @click="nextSlide" />
+                <font-awesome-icon icon="fa-solid fa-chevron-left" class="arrow left" @click="prevSlide" />
             </div>
 
             <div class="slider-row">
@@ -81,6 +118,14 @@ export default {
 @use '../style/generals.scss' as *;
 @use '../style/partials/variables' as *;
 @use '../style/partials/reset' as *;
+
+.off-slide {
+    display: none;
+}
+
+.on-slide {
+    display: block;
+}
 
 .container.row {
     padding: 5rem 0;
@@ -127,16 +172,38 @@ export default {
                 padding-bottom: 0.5rem;
             }
         }
+    }
+}
 
-        .slider-row figure:nth-child(2) {
-            border-bottom: 2px solid $orange-color;
-        }
+.btn {
+    position: relative;
+
+    .triangle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -14px;
+        font-size: 1.5rem;
+
+    }
+
+    .triangle.icon {
+        color: $orange-color;
+    }
+
+    .triangle.icon-2 {
+        display: none;
     }
 }
 
 .btn:hover {
-    background-color: $orange-color;
     color: white;
+    background-color: $orange-color;
+}
+
+.btn:hover .icon-2 {
+    display: block;
+    color: $orange-color;
 }
 
 .arrow:hover {
