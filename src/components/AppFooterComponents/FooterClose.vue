@@ -16,12 +16,12 @@ export default {
     data() {
         return {
             archivesMonths: [
-                'October',
-                'September',
-                'August',
-                'July',
-                'June',
-                'May',
+                'October 2014 (2)',
+                'September 2014 (2)',
+                'August 2014 (2)',
+                'July 2014 (2)',
+                'June 2014 (2)',
+                'May 2014 (1)',
             ],
 
             featuresList: [

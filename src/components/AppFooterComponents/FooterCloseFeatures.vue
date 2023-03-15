@@ -31,12 +31,13 @@ export default {
 
 .features.column {
     gap: 2rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
 
     .features-title {
         font-size: 1.25rem;
         text-transform: uppercase;
         font-weight: 400;
+        color: white;
     }
 
     .features-title::after {

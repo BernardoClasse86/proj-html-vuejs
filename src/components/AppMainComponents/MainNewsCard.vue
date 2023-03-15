@@ -16,6 +16,7 @@ export default {
                 <p class="news-date">{{ newsCard.newsDate }}</p>
 
                 <figure class="news-thumb-style">
+                    <div class="btn-img">+</div>
                     <img class="news-thumb" :src="newsCard.newsImg" alt="">
                     <div class="btn btn-orange">
                         <p>{{ newsCard.newsVisitors }}</p>
@@ -62,11 +63,25 @@ export default {
     color: grey;
 }
 
+.news-thumb-style:hover .btn-img {
+    opacity: 1;
+}
+
 .news-thumb-style {
     position: relative;
 
     .news-thumb {
         width: 100%;
+    }
+
+    .btn-img {
+        opacity: 0;
+        transition: 0.2s;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
     }
 
     .btn {

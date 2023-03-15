@@ -23,9 +23,9 @@ export default {
         </ul>
 
         <div class="product row">
-            <p>&copy; Fable Children Kindergarten WordPess Theme</p>
+            <p>&copy; Fable - Children Kindergarten WordPress Theme</p>
             <p>by</p>
-            <p>QuanticalLabs</p>
+            <p>QuanticaLabs</p>
         </div>
     </div>
 </template>
@@ -47,12 +47,18 @@ export default {
         .btn {
             padding: 0.5rem;
         }
+
+        .btn:hover {
+            background-color: $purple-color;
+        }
     }
 
     .product.row {
         justify-content: center;
         align-items: center;
         gap: 0.25rem;
+        font-size: 0.875rem;
+        color: rgba(0, 0, 0, 0.5);
     }
 }
 </style>

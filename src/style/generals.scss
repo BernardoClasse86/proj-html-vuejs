@@ -32,3 +32,16 @@
     border: 2px solid white;
     padding: 0.5rem 1.5rem;
 }
+
+.btn-img {
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $purple-color-hover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

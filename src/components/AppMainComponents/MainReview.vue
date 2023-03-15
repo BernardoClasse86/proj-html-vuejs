@@ -90,5 +90,9 @@ export default {
         padding: 0.40rem 1.25rem;
         cursor: pointer;
     }
+
+    .solid-select:hover {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
 }
 </style>

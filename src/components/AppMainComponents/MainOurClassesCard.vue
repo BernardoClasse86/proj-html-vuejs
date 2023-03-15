@@ -122,6 +122,10 @@ export default {
                 bottom: 0;
                 right: 0;
             }
+
+            .btn:hover {
+                background-color: $purple-color;
+            }
         }
     }
 

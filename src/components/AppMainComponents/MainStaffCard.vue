@@ -10,14 +10,19 @@ export default {
 
 <template>
     <ul class="staff-card row">
-
         <li class="staff-row staff-card-item" v-for="(staffCard, i) in staffCards" :key="i">
 
-            <figure class="staff-card-desc column">
-                <img class="staff-card-thumb" :src="staffCard.staffImg" alt="">
-                <h5 class="staff-card-name">{{ staffCard.staffName }}</h5>
-                <p class="staff-card-role">{{ staffCard.staffRole }}</p>
-            </figure>
+            <div class="column">
+                <figure class="staff-card-desc">
+                    <img class="staff-card-thumb" :src="staffCard.staffImg" alt="">
+                    <div class="btn-img">+</div>
+                </figure>
+
+                <div class="staff-card-teacher">
+                    <h5 class="staff-card-name">{{ staffCard.staffName }}</h5>
+                    <p class="staff-card-role">{{ staffCard.staffRole }}</p>
+                </div>
+            </div>
 
             <div class="staff-card-desc">
                 <div class="card-details column">
@@ -39,9 +44,7 @@ export default {
                     </div>
                 </div>
             </div>
-
         </li>
-
     </ul>
 </template>
 
@@ -62,12 +65,30 @@ export default {
         display: flex;
         gap: 2rem;
 
-        .staff-card-desc.column {
+        .column {
             gap: 1rem;
             flex-shrink: 0;
             text-align: center;
             flex-basis: 50%;
             color: black;
+
+            .staff-card-desc {
+                position: relative;
+
+                .btn-img {
+                    opacity: 0;
+                    transition: 0.3s;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                }
+            }
+
+            .staff-card-desc:hover .btn-img {
+                opacity: 1;
+            }
 
             .staff-card-name {
                 font-size: 1rem;
@@ -113,5 +134,9 @@ export default {
 .btn.btn-orange {
     line-height: 1rem;
     padding: 0.25rem;
+}
+
+.btn:hover {
+    background-color: $purple-color;
 }
 </style>

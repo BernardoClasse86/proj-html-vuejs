@@ -34,12 +34,13 @@ export default {
 
 .recent-post.column {
     gap: 2rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
 
     .recent-post-title {
         font-size: 1.25rem;
         text-transform: uppercase;
         font-weight: 400;
+        color: white;
     }
 
     .recent-post-title::after {
@@ -59,6 +60,7 @@ export default {
     .post-thumb {
         width: 80px;
         flex-shrink: 0;
+        cursor: pointer;
     }
 
     .post-column {
@@ -69,6 +71,12 @@ export default {
         .post-title {
             font-weight: 400;
             font-size: 1.125rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .post-title:hover {
+            text-decoration: underline;
         }
 
         .date-row {

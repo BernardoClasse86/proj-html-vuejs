@@ -22,6 +22,10 @@ export default {
         <img class="slide-icon-15" src="/images/hero/slider_icon15.png" alt="">
         <img class="slide-icon-17" src="/images/hero/slider_icon17.png" alt="">
         <img class="slide-icon-18" src="/images/hero/slider_icon18.png" alt="">
+
+        <div class="select-row">
+            <div v-for="n in 3" class="solid-select"></div>
+        </div>
     </section>
 </template>
 
@@ -112,5 +116,26 @@ export default {
     position: absolute;
     top: 30px;
     right: 10%;
+}
+
+.select-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3%;
+
+    .solid-select {
+        border: 2px solid $orange-color;
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+    }
+
+    .solid-select:hover {
+        border: 2px solid $purple-color;
+    }
 }
 </style>

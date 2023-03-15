@@ -21,17 +21,17 @@ export default {
 
 .about-us.column {
     gap: 2rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
 
     .about-us-thumb {
         width: 190px;
-
     }
 
     .about-us-title {
         font-size: 1.25rem;
         text-transform: uppercase;
         font-weight: 400;
+        color: white;
     }
 
     .about-us-title::after {

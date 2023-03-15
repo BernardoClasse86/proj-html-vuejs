@@ -153,7 +153,6 @@ export default {
     display: flex;
     gap: 2rem;
     padding: 2rem;
-
     justify-content: space-between;
 
     .text.column {
@@ -168,11 +167,23 @@ export default {
         border: 1px solid lightgray;
     }
 
+    .my-input:focus {
+        border: none;
+        border-bottom: 2px solid $orange-color;
+        outline: none;
+    }
+
     .my-textaera {
         flex-grow: 1;
         padding: 1rem;
         font-size: 1rem;
         border: 1px solid lightgray;
+    }
+
+    .my-textaera:focus {
+        border: none;
+        border-bottom: 2px solid $orange-color;
+        outline: none;
     }
 }
 

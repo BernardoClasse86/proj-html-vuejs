@@ -26,12 +26,14 @@ export default {
 
 .archives.column {
     gap: 2rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
+
 
     .archives-title {
         font-size: 1.25rem;
         text-transform: uppercase;
         font-weight: 400;
+        color: white;
     }
 
     .archives-title::after {
@@ -44,9 +46,17 @@ export default {
 
     .archives-months {
         margin-bottom: 0.25rem;
-        color: white;
-        border: 1px solid white;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
         padding: 0.75rem;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .archives-months:hover {
+        color: white;
+        border: 2px solid white;
     }
 }
 </style>
