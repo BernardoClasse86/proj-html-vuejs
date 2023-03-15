@@ -7,8 +7,8 @@ export default {
 <template>
     <div class="container contacts">
         <div class="column contacts-title">
-            <h1 class="contacts-content-title">what's new</h1>
-            <p class="contacts-content-text">Keep up to date with the latest news</p>
+            <h1 class="contacts-content-title">contact us</h1>
+            <p class="contacts-content-text">Our postal address and contact details</p>
             <img class="divider-thumb" src="/images/main-intro_images/header_divider.png" alt="">
         </div>
 
