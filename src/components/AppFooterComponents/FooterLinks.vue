@@ -23,9 +23,9 @@ export default {
         </ul>
 
         <div class="product row">
-            <p>&copy; Fable - Children Kindergarten WordPress Theme</p>
+            <p class="text-style">&copy; Fable - Children Kindergarten WordPress Theme</p>
             <p>by</p>
-            <p>QuanticaLabs</p>
+            <p class="text-style">QuanticaLabs</p>
         </div>
     </div>
 </template>
@@ -59,6 +59,11 @@ export default {
         gap: 0.25rem;
         font-size: 0.875rem;
         color: rgba(0, 0, 0, 0.5);
+
+        .text-style:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }
 </style>
