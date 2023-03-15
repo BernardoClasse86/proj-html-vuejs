@@ -15,9 +15,9 @@ export default {
         </p>
 
         <ul>
-            <li class="row" v-for="(listItem, i) in featuresList" :key="i">
+            <li class="list-row" v-for="(listItem, i) in featuresList" :key="i">
                 <img :src="listItem.listImg" alt="">
-                <p>{{ listItem.listText }}</p>
+                <p class="list-text">{{ listItem.listText }}</p>
             </li>
         </ul>
 
@@ -30,6 +30,33 @@ export default {
 @use '../../style/partials/reset' as *;
 
 .features.column {
-    gap: 1rem;
+    gap: 2rem;
+    color: white;
+
+    .features-title {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    .features-title::after {
+        content: "";
+        display: block;
+        padding: 0.5rem 2rem;
+        width: 10px;
+        border-bottom: 1px solid white;
+    }
+
+}
+
+.list-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+
+    .list-text {
+        margin-bottom: 0.5rem;
+    }
 }
 </style>
