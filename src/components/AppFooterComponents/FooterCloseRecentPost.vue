@@ -88,6 +88,10 @@ export default {
             width: 16px;
             height: 16px;
         }
+
+        .post-date {
+            font-size: 0.75rem;
+        }
     }
 }
 </style>
