@@ -6,9 +6,44 @@ export default {
             reviews: [
                 {
                     reviewText: 'Fable Kindergarten is a great place for my daughter to start her schooling experience. It’s welcoming and safe and my daughter loves being there.',
-                    reviewAuthor: 'Joe R. Hamblen'
+                    reviewAuthor: 'Matthew D. Campbell',
+                    reviewIndex: ''
+                },
+                {
+                    reviewText: 'I have a 1 year old and a 5 year old who have been attending for a year now. I can not tell you how much I adore and appreciate all of the wonderful staff.',
+                    reviewAuthor: 'Kennth M.Garcia',
+                    reviewIndex: ''
+                },
+                {
+                    reviewText: 'I have to say that I have 2 children ages 5 and 2 and have used various daycare’s in Kindergartens and this is by far the very best I have ever used.',
+                    reviewAuthor: 'Cecil J. Kirk',
+                    reviewIndex: ''
+                },
+                {
+                    reviewText: 'Fable Kindergarten is a great place for my daughter to start her schooling experience. It’s welcoming and safe and my daughter loves being there.',
+                    reviewAuthor: 'Joe R. Hamblen',
+                    reviewIndex: ''
+                },
+                {
+                    reviewText: 'This letter is to recognize you and your staff for doing an excellent job teaching my son. His skill level is significantly better since attending Fable.',
+                    reviewAuthor: 'Toni I. Robinette',
+                    reviewIndex: ''
+                },
+                {
+                    reviewText: 'I have to say that I have 2 children ages 5 and 2 and have used various daycare’s in Kindergartens and this is by far the very best I have ever used.',
+                    reviewAuthor: 'Emma E. Shook',
+                    reviewIndex: ''
                 }
-            ]
+            ],
+
+            reviewsCounter: 0
+        }
+    },
+    methods: {
+        changeActiveReview(index) {
+
+            this.reviewsCounter = index
+
         }
     }
 
@@ -17,7 +52,8 @@ export default {
 
 <template>
     <div class="container">
-        <div v-for="review in reviews" class="column">
+        <div v-for="(review, i) in reviews" :key="i" class="column off-review"
+            :class="i === reviewsCounter ? 'on-review' : ''">
             <figure class="quote-thumb-style">
                 <img src="/images/main-reviews_images/quote_alt.png" alt="">
             </figure>
@@ -26,7 +62,8 @@ export default {
         </div>
 
         <div class="select-row">
-            <div v-for="n in 6" class="solid-select"></div>
+            <div v-for="(n, i) in 6" :key="i" class="solid-select" :class="i === reviewsCounter ? 'move-up' : ''"
+                @click="changeActiveReview(i)"></div>
         </div>
     </div>
 </template>
@@ -38,6 +75,14 @@ export default {
 
 .container {
     padding: 4.5rem;
+
+    .off-review {
+        display: none;
+    }
+
+    .on-review {
+        display: block;
+    }
 
     .column {
         text-align: center;
@@ -85,9 +130,13 @@ export default {
     justify-content: center;
     gap: 1rem;
 
+    .move-up {
+        margin-bottom: 1rem;
+    }
+
     .solid-select {
         border: 2px solid white;
-        padding: 0.40rem 1.25rem;
+        padding: 0.25rem 1rem;
         cursor: pointer;
     }
 

@@ -93,8 +93,8 @@ export default {
 
         .solid-select {
             border: 2px solid white;
-            padding: 0.5rem 1.5rem;
             cursor: pointer;
+            padding: 0.25rem 1rem;
         }
 
         .solid-select:hover {

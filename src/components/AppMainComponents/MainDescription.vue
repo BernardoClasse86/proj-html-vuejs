@@ -39,6 +39,12 @@ export default {
             }
 
         },
+
+        changeActiveSlide(index) {
+
+            this.slideCounter = index
+
+        }
     },
 }
 
@@ -98,16 +104,9 @@ export default {
             </div>
 
             <div class="slider-row">
-                <figure class="desc-slide">
-                    <img class="" src="/images/main-desc_images/gallery_01-690x506.jpg" alt="">
-                </figure>
-
-                <figure class="desc-slide">
-                    <img class="" src="/images/main-desc_images/gallery_07-690x506.jpg" alt="">
-                </figure>
-
-                <figure class="desc-slide">
-                    <img class="" src="/images/main-desc_images/gallery_08-690x506.jpg" alt="">
+                <figure v-for="(descSlide, i) in descSlides" class="desc-slide"
+                    :class="i === slideCounter ? 'orange-line' : ''" @click="changeActiveSlide(i)">
+                    <img class="" :src="descSlide.image" alt="">
                 </figure>
             </div>
         </div>
@@ -170,7 +169,13 @@ export default {
             .desc-slide {
                 flex-basis: calc(100% / (4/12));
                 padding-bottom: 0.5rem;
+                cursor: pointer;
             }
+
+            .orange-line {
+                border-bottom: 1px solid $orange-color;
+            }
+
         }
     }
 }
